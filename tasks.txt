@@ -1,0 +1,9 @@
+Task1. input liya and when we click simulate then first section hide and our second page
+shown(complete)
+
+Task2. restart kra game ko first ma aajaye(complete)(Read import and export)
+
+Task3. create floor(error occur while creating div element in second page via javascript
+give error:-
+ document.getElementsByClassName(...).appendChild is not a function 
+
