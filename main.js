@@ -13,6 +13,7 @@ function hideFirstPage(){
 function hideSecondPage(){
     document.querySelector('.secondPage').style.display='none';
     document.querySelector('.firstPage').style.display='block';
+    deletingFloors()
 }
 
 function makingFloors(){
@@ -40,7 +41,16 @@ function makingFloors(){
         //floordiv append
         floordiv.appendChild(buttondiv1)
 
-        document.getElementsByClassName('secondPage').appendChild(floordiv);
+        document.querySelector('secondPage').appendChild(floordiv);
     }
     
+}
+function deletingFloors(){
+
+    let floorInput = document.querySelector('#floorNumber').value;
+
+    for (let i = floorInput; i > 0; i--) {
+        let floordiv=document.querySelector('.box');
+        floordiv.remove();
+    }
 }
