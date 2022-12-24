@@ -1,4 +1,8 @@
-/* .firstPage{
+*{
+    margin: 0;
+    padding: 0;
+}
+.firstPage{
     display: block;
 }
 .secondPage{
@@ -7,13 +11,14 @@
 .hrfloorName{
     display: flex;
     flex-direction: row;
-    margin: 3%;
+    margin: 3px;
 }
 hr{
     flex-grow:1;
     height: 1px;
-} */
-/* h2 {
+} 
+
+h2 {
     width: 100%; 
     text-align: center; 
     border-bottom: 1px solid #000; 
@@ -24,4 +29,37 @@ hr{
  h2 span { 
      background:#fff; 
      padding:0 10px; 
- } */
+ }
+ .button{
+    width:50px;
+    display: flex;
+    flex-direction: column;
+    margin: 11px 18px;
+ }
+ .button button{
+    margin: 2px;
+ }
+.goToFirstPage{
+    font-size: 18x;
+    margin: 5px 0 10px 3px ;
+    background-color: red;
+    color: white;
+    width:60px;
+    height: 23px;
+    cursor: pointer;
+}
+.buttonLift{
+    display: flex;
+}
+.lift{
+    width: 50px;
+    height: 60px;
+    background-color: yellow;
+    border: 2px solid black;
+    margin-right: 5px;
+
+}
+.mainLift{
+    display: flex;
+    margin-left: 10px;
+}
