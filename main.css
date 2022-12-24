@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .firstPage{
     display: block;
 }
@@ -7,21 +11,13 @@
 .hrfloorName{
     display: flex;
     flex-direction: row;
-    margin: 3%;
-}
-.button{
-    display: flex;
-    flex-direction: column;
-    width: 50px;
-    margin-left: 3%;
-}
-.down{
-    margin-top: 3px;
+    margin: 3px;
 }
 hr{
     flex-grow:1;
     height: 1px;
 } 
+
 h2 {
     width: 100%; 
     text-align: center; 
@@ -34,14 +30,36 @@ h2 {
      background:#fff; 
      padding:0 10px; 
  }
-
- .lift{
+ .button{
+    width:50px;
     display: flex;
-    width: 50px;
-    /* flex-direction: row; */
-    border:1px solid black;
-    padding: 3%;
-    /* position: absolute; */
-    /* left: 15%; */
-    /* bottom: 83%; */
+    flex-direction: column;
+    margin: 11px 18px;
  }
+ .button button{
+    margin: 2px;
+ }
+.goToFirstPage{
+    font-size: 18x;
+    margin: 5px 0 10px 3px ;
+    background-color: red;
+    color: white;
+    width:60px;
+    height: 23px;
+    cursor: pointer;
+}
+.buttonLift{
+    display: flex;
+}
+.lift{
+    width: 50px;
+    height: 60px;
+    background-color: yellow;
+    border: 2px solid black;
+    margin-right: 5px;
+
+}
+.mainLift{
+    display: flex;
+    margin-left: 10px;
+}

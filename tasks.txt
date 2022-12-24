@@ -15,12 +15,18 @@ task6. How to create 1 lift
        1. lift create krh liya(complete)
        2. abh huma lift shirfh floor 0index ka liye create krna hai(complete)
 
-task7. abh huma lift input ma no. dalta utna lift create hona chaiye floor 0 index
 
-task 8. for open and close (read transition transform)
-task 9. Lift having doors open in 2.5s, then closing in another 2.5s
+task7. abh huma lift input ma no. dalta utna lift create hona chaiye floor 0 index(complete)
+       1. changes button and no. of lifts ak div ma daal diye
+       2. hr lift ak class name lift and id `lift${j}`
+       3. position absolute and position relative ma dikkat ho rhi hai
 
-task 10. Upon clicking a particular button on the floor, a lift goes to that floor
+task8. How to move a lift(25/12/2022)
 
-task 11. when 18 floor hogye then we don't want ki scroll krka floor dekha
+task 9. for open and close (read transition transform)
+task 10. Lift having doors open in 2.5s, then closing in another 2.5s
+
+task 11. Upon clicking a particular button on the floor, a lift goes to that floor
+
+task 12. when 18 floor hogye then we don't want ki scroll krka floor dekha
 
