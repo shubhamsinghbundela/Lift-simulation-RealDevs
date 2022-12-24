@@ -8,6 +8,7 @@ function hideFirstPage(){
     document.querySelector('.secondPage').style.display='block';
     console.log('second')
     makingFloors();
+    // makingLifts()
 }
 
 function hideSecondPage(){
@@ -17,11 +18,17 @@ function hideSecondPage(){
 }
 
 function makingFloors(){
-    console.log('2')
     let floorInput = document.querySelector('#floorNumber').value;
+    let liftInput = document.querySelector('#liftNumber').value;
     for(let i=floorInput;i>0;i--){
+        
         let floordiv=document.createElement('div');
         floordiv.className='box';
+        // if(i==1){
+        //     console.log('a')
+        //     let liftdiv= makingLifts();
+        //     floordiv.appendChild(liftdiv);
+        // }
         let buttondiv1=document.createElement('div');
         buttondiv1.className='button';
         //button1 create
@@ -33,7 +40,7 @@ function makingFloors(){
         let button2=document.createElement("BUTTON");
         let text2 = document.createTextNode("Down");
         button2.className="down";
-        button1.appendChild(text2);
+        button2.appendChild(text2);
         //button1 append
         buttondiv1.appendChild(button1);
         //button2 append
@@ -41,10 +48,31 @@ function makingFloors(){
         //floordiv append
         floordiv.appendChild(buttondiv1)
 
-        document.querySelector('secondPage').appendChild(floordiv);
+
+        let hrdiv=document.createElement('div');
+        hrdiv.className="hrfloorName";
+        let hr=document.createElement("HR");
+        let spanFloorNo=document.createElement("span");
+        spanFloorNo.innerText=`Floor${i}`;
+        hrdiv.appendChild(hr);
+        hrdiv.appendChild(spanFloorNo);
+        floordiv.appendChild(hrdiv)
+
+        // create lift
+        if(i==1){
+            console.log('a')
+            for(let i=0;i<liftInput;i++){
+                // makinglift()
+                let liftdiv=document.createElement('div');
+                liftdiv.className='lift';
+                floordiv.appendChild(liftdiv);
+            }
+        }
+        document.querySelector('.secondPage').appendChild(floordiv);
     }
     
 }
+
 function deletingFloors(){
 
     let floorInput = document.querySelector('#floorNumber').value;
@@ -52,5 +80,16 @@ function deletingFloors(){
     for (let i = floorInput; i > 0; i--) {
         let floordiv=document.querySelector('.box');
         floordiv.remove();
+        
     }
 }
+
+// function makingLifts(){
+
+//     let liftInput = document.querySelector('#Number').value;
+
+//     let liftdiv=document.createElement('div');
+//     liftdiv.className='lift';
+//     return liftdiv;
+//     // document.querySelector('.box').appendChild=liftdiv;
+// }

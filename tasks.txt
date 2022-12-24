@@ -5,5 +5,22 @@ Task2. restart kra game ko first ma aajaye(complete)(Read import and export)
 
 Task3. create floor(error occur while creating div element in second page via javascript
 give error:-
- document.getElementsByClassName(...).appendChild is not a function 
+ document.getElementsByClassName(...).appendChild is not a function (DONE)
+
+Task4. add hr and Floor to the div class box(Done)
+
+Task5. up and down(make in column designing in css)(Done)
+
+task6. How to create 1 lift 
+       1. lift create krh liya(complete)
+       2. abh huma lift shirfh floor 0index ka liye create krna hai(complete)
+
+task7. abh huma lift input ma no. dalta utna lift create hona chaiye floor 0 index
+
+task 8. for open and close (read transition transform)
+task 9. Lift having doors open in 2.5s, then closing in another 2.5s
+
+task 10. Upon clicking a particular button on the floor, a lift goes to that floor
+
+task 11. when 18 floor hogye then we don't want ki scroll krka floor dekha
 

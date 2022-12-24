@@ -1,4 +1,4 @@
-/* .firstPage{
+.firstPage{
     display: block;
 }
 .secondPage{
@@ -9,11 +9,20 @@
     flex-direction: row;
     margin: 3%;
 }
+.button{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    margin-left: 3%;
+}
+.down{
+    margin-top: 3px;
+}
 hr{
     flex-grow:1;
     height: 1px;
-} */
-/* h2 {
+} 
+h2 {
     width: 100%; 
     text-align: center; 
     border-bottom: 1px solid #000; 
@@ -24,4 +33,15 @@ hr{
  h2 span { 
      background:#fff; 
      padding:0 10px; 
- } */
+ }
+
+ .lift{
+    display: flex;
+    width: 50px;
+    /* flex-direction: row; */
+    border:1px solid black;
+    padding: 3%;
+    /* position: absolute; */
+    /* left: 15%; */
+    /* bottom: 83%; */
+ }
