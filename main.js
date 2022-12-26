@@ -37,12 +37,14 @@ function makingFloors() {
         let button1 = document.createElement("button");
         let text1 = document.createTextNode("Up");
         button1.className = "up";
+        button1.setAttribute('id',`up${i}`);
         button1.appendChild(text1);
 
         //button2 create 
         let button2 = document.createElement("button");
         let text2 = document.createTextNode("Down");
         button2.className = "down";
+        button2.setAttribute('id',`down${i}`);
         button2.appendChild(text2);
 
         //button1 append
@@ -53,7 +55,7 @@ function makingFloors() {
 
         buttonLift.appendChild(buttondiv1);
 
-        //floordiv append
+        //buttonLift append
         floordiv.appendChild(buttonLift);
 
 
@@ -67,7 +69,20 @@ function makingFloors() {
                 liftdiv.className='lift';
                 liftdiv.setAttribute('id',`lift${j}`);
 
+                let gates=document.createElement('div');
+                gates.className='gates';
+
+                let gate1=document.createElement('div');
+                gate1.className='gate1';
+                gates.appendChild(gate1);
+
+                let gate2=document.createElement('div');
+                gate2.className='gate2';
+                gates.appendChild(gate2);
+
+                liftdiv.appendChild(gates);
                 mainLift.appendChild(liftdiv);
+
             }
             buttonLift.appendChild(mainLift);
         }
@@ -89,9 +104,6 @@ function makingFloors() {
 
         floordiv.appendChild(hrdiv);
 
-
-        
-
         document.querySelector('.secondPage').appendChild(floordiv);
         
     }
@@ -107,3 +119,4 @@ function deletingFloors(){
         floordiv.remove();
     }
 }
+
