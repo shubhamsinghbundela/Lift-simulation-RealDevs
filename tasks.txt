@@ -21,7 +21,9 @@ task7. abh huma lift input ma no. dalta utna lift create hona chaiye floor 0 ind
        2. hr lift ak class name lift and id `lift${j}`
        3. position absolute and position relative ma dikkat ho rhi hai
 
-task8. How to move a lift(25/12/2022)
+task8. How to move a lift(25/12/2022) (complete)
+
+task9. we have to move all lift on particular floor after clicking particular button of floor
 
 task 9. for open and close (read transition transform)
 task 10. Lift having doors open in 2.5s, then closing in another 2.5s
