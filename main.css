@@ -42,12 +42,19 @@ h2 {
  }
  .button button{
     margin: 2px;
+    font-weight: bold;
  }
  .up{
-    background-color: rgb(38, 255, 38);
+    background-color: rgb(120, 255, 255);
+    border: 1px solid black;
+    border-radius:5px ;
+    cursor: pointer;
  }
  .down{
-    background-color: yellow;
+    background-color: rgb(255, 243, 7);
+    border: 1px solid black;
+    border-radius:5px ;
+    cursor: pointer;
  }
 .goToFirstPage{
     font-size: 18x;
@@ -60,14 +67,15 @@ h2 {
 }
 .buttonLift{
     display: flex;
-    margin-top: 20px;
+    margin-top: 6px;
 }
 .lift{
     width: 50px;
     height: 60px;
     background-color: yellow;
-    border: 2px solid black;
-    margin-right: 5px; 
+    border: 2px solid rgb(0, 0, 0);
+    margin-right: 5px;
+    transition: transform 2.5s ease-in-out;
 }
 
 .mainLift{
@@ -79,8 +87,9 @@ h2 {
 }
 .gate1 , .gate2{
     width: 25px;
-    height: 58px;
+    height: 56px;
     margin: 1px;
-    background-color: red;
-    transition: background-color 3s ;
+    border: 1px solid rgb(227, 54, 54);
+    background-color: rgb(144, 0, 255);
+    transition: width 3s ease-in-out;
 }

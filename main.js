@@ -6,7 +6,6 @@ restart.addEventListener('click', hideSecondPage);
 function hideFirstPage() {
     document.querySelector('.firstPage').style.display = 'none';
     document.querySelector('.secondPage').style.display = 'block';
-    console.log('second')
     makingFloors();
 }
 
@@ -71,6 +70,7 @@ function makingFloors() {
 
                 let gates=document.createElement('div');
                 gates.className='gates';
+                gates.setAttribute('id',`gates${1}`);
 
                 let gate1=document.createElement('div');
                 gate1.className='gate1';
@@ -86,9 +86,7 @@ function makingFloors() {
             }
             buttonLift.appendChild(mainLift);
         }
-
-
-            
+  
 
         //Creating HrFloor
         let hrdiv=document.createElement('div');
@@ -105,9 +103,29 @@ function makingFloors() {
         floordiv.appendChild(hrdiv);
 
         document.querySelector('.secondPage').appendChild(floordiv);
-        
     }
 
+    //moving lift up
+    let newlift=document.querySelectorAll('.lift')[0];
+    document.querySelector('#up2').addEventListener('click',()=>{
+        newlift.style.transform='translateY(-94px)';
+
+        //opening gates
+        let gate1=document.querySelector('.gate1');
+        let gate2=document.querySelector('.gate2');
+
+        setTimeout(()=>{
+            gate1.style.width='3px';
+            gate2.style.width='3px';
+        },3000);
+
+        setTimeout(()=>{
+            gate1.style.width='25px';
+            gate2.style.width='25px';
+        },6000)
+        
+    });
+    
 }
 
 function deletingFloors(){
