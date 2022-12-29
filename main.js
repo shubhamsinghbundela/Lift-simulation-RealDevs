@@ -125,7 +125,7 @@ function makingFloors() {
         let liftdiv = document.createElement('div');
         liftdiv.className = 'lift';
         liftdiv.setAttribute('id', `lift${j}`);
-
+        liftdiv.setAttribute('flag', `free`);
         let gates = document.createElement('div');
         gates.className = 'gates';
         gates.setAttribute('id', `gates`);
@@ -140,30 +140,80 @@ function makingFloors() {
         liftdiv.appendChild(gates);
         mainLift.appendChild(liftdiv);
     }
-    
+
 
     //last box ka button ma lift add krh diye
-    const mainbuttonlift=document.querySelectorAll('.buttonLift');
-    const lastbox=mainbuttonlift[mainbuttonlift.length-1];
-    console.log(lastbox)
+    const mainbuttonlift = document.querySelectorAll('.buttonLift');
+    // console.log(mainbuttonlift);
+    const lastbox = mainbuttonlift[mainbuttonlift.length - 1];
+    // console.log(lastbox)
     // liftBox.
     lastbox.appendChild(mainLift);
 
     // select all lift
-    let selectAllLift=document.querySelectorAll('.lift')
-    console.log(selectAllLift)
     
+
     //we move lift1 after clicking up2  (testing)
-    let btn=document.querySelector('#up2');
-    btn.addEventListener('click',()=>{
-        let liftZero=selectAllLift[0];
-        console.log(liftZero)
-        liftZero.style.transform='translateY(-95px)';
+    // for(let )
+    // let btn=document.querySelector('#up2');
+    // btn.addEventListener('click',()=>{
+    //     let liftZero=selectAllLift[0];
+    //     console.log(liftZero)
+    //     liftZero.style.transform='translateY(-95px)';
+    // })
+    let selectAllLift = document.querySelectorAll('.lift');
+    // console.log('s',selectAllLift)
+    let up = document.querySelectorAll('.up');
+    let nUp = up.length;
+    let prev = 0;
+    
+    let down = document.querySelectorAll('.down');
+    // console.log(up);
+    // console.log(down);
+    
+    up.forEach((e, i) => {
+        e.addEventListener('click', () => {
+            // if (prev < nUp - i) {
+                // console.log('up', nUp - i);
+                let floorValue=nUp - i;
+                for(let i=0;i<selectAllLift.length;i++){
+                    // console.log(selectAllLift)
+                    if(selectAllLift[i].getAttribute('flag')==='free'){
+                        selectAllLift[i].setAttribute('flag','busy');
+                        moveLift(selectAllLift[i],floorValue);
+                        // selectAllLift[i].setAttribute('flag','free');
+                        console.log(selectAllLift[i]);
+                        break;
+                    }
+                    console.log('s')
+                }
+                // let liftZero = selectAllLift[0];
+                // // console.log(liftZero)
+                // liftZero.
+                // prev = nUp - i;
+                // console.log(prev);
+            // }
+        })
     })
-
-
-
 }
+
+function moveLift(liftno,floorNo){
+    let oldFloorValue=1;
+    liftno.style.transform = `translateY(${-95 * (floorNo- 1)}px)`;
+    // // console.log('prev',prev)
+    
+    // // added transitionDuration to class Lift
+    liftno.style.transitionDuration=`${2*(floorNo-oldFloorValue)}s`
+    // console.log('snjh',2*(nUp-i-oldFloorValue));
+    
+    // liftno.setAttribute('flag','free');
+    setTimeout(()=>{
+        liftno.setAttribute('flag','free')
+        console.log(liftno.getAttribute('flag'))
+    },2*(floorNo-oldFloorValue)*1000)
+    oldFloorValue=floorNo;
+}
+
 
 function deletingFloors() {
 

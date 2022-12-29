@@ -57,7 +57,11 @@ h2 {
     background-color: yellow;
     border: 2px solid black;
     margin-right: 5px;
-    transition: transform 2s ease-in;
+    /* transition:transition property, transition duration, transition time function; */
+    /* transition: transform ease-in; */
+    transition-property:transform;
+    transition-timing-function:ease-in;
+    /* data-state:free; */
 }
 /* #lift1{
     transition: transform 2s ease-in;

@@ -23,12 +23,36 @@ task7. abh huma lift input ma no. dalta utna lift create hona chaiye floor 0 ind
 
 task8. How to move a lift(25/12/2022) (complete)
 
-task9. we have to move all lift on particular floor after clicking particular button of floor
+task9. Upon clicking a particular button on the floor, a lift goes to that
+      floor(complete)
+task10. we have to move lift upon click up button  (28/12/2022)(complete)
+       1.flag daal denga true means up and false means down
+       2. previous =nUp-i(currentFloor) when we press new up button it will 
+        first check if(prev<newFloorupButton) then go up otherwise no action will
+        perform (complete)
 
-task 9. for open and close (read transition transform)
-task 10. Lift having doors open in 2.5s, then closing in another 2.5s
+task 11:  Lift moving at 2s per floor(29-12-2022)(complete)
+          let oldFloor=1
+          2*(nUp-i-oldFloor)
+          oldFloor=nUp-i
+          transition duration add by javascript
 
-task 11. Upon clicking a particular button on the floor, a lift goes to that floor
+task 12. we have to move all lift on particular floor after clicking particular
+       button of floor
+       1. 4lift ak array ma liye
+       2. loop chla deta
+       3. intial data state sbh ma free rhaga
+       4. condition check kraga sbh lift ko loop ma if free then move then break
+          and loop new start hoga
 
-task 12. when 18 floor hogye then we don't want ki scroll krka floor dekha
+Problem: up click hoga then uska nicha wala kaam nhi hoga
+task 12. for open and close (read transition transform)-complete
+
+task 13. Lift having doors open in 2.5s, then closing in another 2.5s
+
+
+
+task 13. when 18 floor hogye then we don't want ki scroll krka floor dekha
+
+task 14. Depend on screen size lift lena chaiye
 
