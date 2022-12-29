@@ -38,14 +38,15 @@ task 11:  Lift moving at 2s per floor(29-12-2022)(complete)
           transition duration add by javascript
 
 task 12. we have to move all lift on particular floor after clicking particular
-       button of floor
+       button of floor(complete)
        1. 4lift ak array ma liye
        2. loop chla deta
        3. intial data state sbh ma free rhaga
        4. condition check kraga sbh lift ko loop ma if free then move then break
           and loop new start hoga
 
-Problem: up click hoga then uska nicha wala kaam nhi hoga
+Problem: up click hoga then uska nicha wala kaam nhi hoga(complete)
+
 task 12. for open and close (read transition transform)-complete
 
 task 13. Lift having doors open in 2.5s, then closing in another 2.5s
