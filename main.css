@@ -72,11 +72,12 @@ h2 {
 }
 .gates{
     display: flex;
+
 }
 .gate1 , .gate2{
     width: 25px;
     height: 58px;
     margin: 1px;
     background-color: red;
-    transition: background-color 3s ;
+    transition: width 3s ease-in-out;
 }

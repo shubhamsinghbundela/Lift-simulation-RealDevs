@@ -151,7 +151,7 @@ function makingFloors() {
     lastbox.appendChild(mainLift);
 
     // select all lift
-    
+
 
     //we move lift1 after clicking up2  (testing)
     // for(let )
@@ -166,54 +166,81 @@ function makingFloors() {
     let up = document.querySelectorAll('.up');
     let nUp = up.length;
     let prev = 0;
-    
+
     let down = document.querySelectorAll('.down');
     // console.log(up);
     // console.log(down);
-    
+    let oldFloorValueArray=[];
+    for(let i=0;i<selectAllLift.length;i++){
+        oldFloorValueArray.push(1)
+    }
+    // console.log(oldFloorValueArray)
+    // let oldFloorValue = 1;
     up.forEach((e, i) => {
         e.addEventListener('click', () => {
             // if (prev < nUp - i) {
-                // console.log('up', nUp - i);
-                let floorValue=nUp - i;
-                for(let i=0;i<selectAllLift.length;i++){
-                    // console.log(selectAllLift)
-                    if(selectAllLift[i].getAttribute('flag')==='free'){
-                        selectAllLift[i].setAttribute('flag','busy');
-                        moveLift(selectAllLift[i],floorValue);
-                        // selectAllLift[i].setAttribute('flag','free');
-                        console.log(selectAllLift[i]);
-                        break;
-                    }
-                    console.log('s')
+            // console.log('up', nUp - i);
+            let floorValue = nUp - i;
+            for (let i = 0; i < selectAllLift.length; i++) {
+                // console.log(selectAllLift)
+                if (selectAllLift[i].getAttribute('flag') === 'free') {
+                    selectAllLift[i].setAttribute('flag', 'busy');
+                    
+                    moveLift(selectAllLift[i], floorValue,oldFloorValueArray[i]);
+                    oldFloorValueArray[i]=floorValue;
+                    console.log(oldFloorValueArray)
+                    // selectAllLift[i].setAttribute('flag','free');
+                    console.log(selectAllLift[i]);
+                    break;
                 }
-                // let liftZero = selectAllLift[0];
-                // // console.log(liftZero)
-                // liftZero.
-                // prev = nUp - i;
-                // console.log(prev);
+                console.log('s')
+            }
+            // let liftZero = selectAllLift[0];
+            // // console.log(liftZero)
+            // liftZero.
+            prev = nUp - i;
+            // console.log(prev);
             // }
         })
     })
 }
 
-function moveLift(liftno,floorNo){
-    let oldFloorValue=1;
-    liftno.style.transform = `translateY(${-95 * (floorNo- 1)}px)`;
+function moveLift(liftno, floorNo,oldFloorValue) {
+    
+    liftno.style.transform = `translateY(${-95 * (floorNo - 1)}px)`;
     // // console.log('prev',prev)
-    
-    // // added transitionDuration to class Lift
-    liftno.style.transitionDuration=`${2*(floorNo-oldFloorValue)}s`
-    // console.log('snjh',2*(nUp-i-oldFloorValue));
-    
-    // liftno.setAttribute('flag','free');
-    setTimeout(()=>{
-        liftno.setAttribute('flag','free')
-        console.log(liftno.getAttribute('flag'))
-    },2*(floorNo-oldFloorValue)*1000)
-    oldFloorValue=floorNo;
-}
 
+    // // added transitionDuration to class Lift
+    let prev= `${2 * (floorNo - oldFloorValue)}s`
+    liftno.style.transitionDuration = prev;
+    console.log('snjh',2*(floorNo -oldFloorValue));
+    
+
+    // liftno.setAttribute('flag','free');
+    setTimeout(() => {
+        gateopenclose();
+        setTimeout(() =>{
+            liftno.setAttribute('flag', 'free')
+        },9000);
+        console.log(liftno.getAttribute('flag'))
+    }, 2 * (floorNo - oldFloorValue) * 1000)
+    
+ 
+} 
+
+function gateopenclose() {
+    let gate1 = document.querySelector('.gate1');
+    let gate2 = document.querySelector('.gate2');
+    setTimeout(() => {
+        gate1.style.width = '3px';
+        gate2.style.width = '3px';
+    }, 2000);
+
+    setTimeout(() => {
+        gate1.style.width = '25px';
+        gate2.style.width = '25px';
+    }, 6000)
+}
 
 function deletingFloors() {
 
