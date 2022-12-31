@@ -218,7 +218,8 @@ function moveLift(liftno, floorNo,oldFloorValue) {
 
     // liftno.setAttribute('flag','free');
     setTimeout(() => {
-        gateopenclose();
+        
+        gateopenclose(liftno);
         setTimeout(() =>{
             liftno.setAttribute('flag', 'free')
         },9000);
@@ -228,17 +229,21 @@ function moveLift(liftno, floorNo,oldFloorValue) {
  
 } 
 
-function gateopenclose() {
+function gateopenclose(liftno) {
+    // console.log(liftno,'a')
+    let gates=liftno.firstChild; 
+    console.log(gates,'a')
+    console.log();
     let gate1 = document.querySelector('.gate1');
     let gate2 = document.querySelector('.gate2');
     setTimeout(() => {
-        gate1.style.width = '3px';
-        gate2.style.width = '3px';
+        gates.children[0].style.width = '3px';
+        gates.children[1].style.width = '3px';
     }, 2000);
 
     setTimeout(() => {
-        gate1.style.width = '25px';
-        gate2.style.width = '25px';
+        gates.children[0].style.width = '25px';
+        gates.children[1].style.width = '25px';
     }, 6000)
 }
 

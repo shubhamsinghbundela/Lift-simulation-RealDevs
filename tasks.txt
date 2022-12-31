@@ -49,14 +49,20 @@ Problem: up click hoga then uska nicha wala kaam nhi hoga(complete)
 
 task 12. for open and close (read transition transform)-complete
 
-task 13. Lift having doors open in 2.5s, then closing in another 2.5s(30/12/2022)
 
-task 14. when lift go from 1st floor its take 2s per floor but particular floor 
-         per floor pahuchna sa lift 0s sa start krh rha hai(30/12/2022)
-task 15. gate1 or gate2 but huma gate id lena hoga sbhi lift ka liye because first
-         lift ka hee door open ho rha hai(30/12/2022)
+
+task 14. problem- when lift go from 1st floor its take 2s per floor but particular floor 
+         per floor pahuchna sa lift 0s sa start krh rha hai)(30/12/2022)(complete)
+
 task 16. jbh lift down aayegi tvh problem ho rhi hai uska transition (30/12/2022)
+         (complete)
 
+task 13. Lift having doors open in 2.5s, then closing in another 2.5s(31/12/2022)
+(incomplete)
+task 15. gate1 or gate2 but huma gate id lena hoga sbhi lift ka liye because first
+         lift ka hee door open ho rha hai(31/12/2022)(incomplete)
+task 16. down button remove(31/12/2022)
+task 17. when we click simulate button sound start(31/12/2022)
 task 13. when 18 floor hogye then we don't want ki scroll krka floor dekha
 
 task 14. Depend on screen size lift lena chaiye
